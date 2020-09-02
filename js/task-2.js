@@ -15,7 +15,7 @@ function filterArray(array, cb) {
     const element = array[i];
     const index = i;
     // Write code under this line
-    if (cb(element, index, arr)) {
+    if (cb(element, index, array)) {
       numbers.push(element);
     }
   }
@@ -23,7 +23,6 @@ function filterArray(array, cb) {
 }
 
 const arr = [1, 2, 3, 4, 5, 1, 2, 5];
-
 
 console.log(filterArray(arr, isUniq));
 // [1, 2, 3, 4, 5]
