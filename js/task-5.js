@@ -1,3 +1,4 @@
+// Задача 4 - 5
 // bind для замены this в методах объекта
 // Оформи вызов метода invokeInventoryAction таким образом, чтобы в качестве this для методов
 
@@ -23,7 +24,8 @@ const invokeInventoryAction = function (itemName, action) {
 
 const invokeAdd = invokeInventoryAction(
   'Medkit',
-  inventory.add, // Write code in this line
+  // inventory.add, // Write code in this line
+  inventory.add.bind(inventory),
 );
 const arrayAdd = [...inventory.items];
 
@@ -35,7 +37,8 @@ console.log(arrayAdd);
 
 const invokeRemove = invokeInventoryAction(
   'Gas mask',
-  inventory.remove, // Write code in this line
+  // inventory.remove, // Write code in this line
+  inventory.remove.bind(inventory),
 );
 
 const arrayRemove = [...inventory.items];
